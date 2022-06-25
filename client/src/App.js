@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -8,6 +9,12 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import Header from '../src/components/Header';
 // import Footer from '../src/components/Footer';
+
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Signup from './pages/Signup'
+import Sales from './pages/Sales';
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -29,9 +36,33 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div>
-      <Header></Header>
-    </div>
+    <ApolloProvider client={client}>
+      <Router>
+        <div>
+          <Header />
+          <div>
+            <Routes>
+              <Route
+                path="/"
+                element={<Home />}
+              />
+              <Route
+                path="/login"
+                element={<Login />}
+              />
+              <Route
+                path="/signup"
+                element={<Signup />}
+              />
+              <Route
+                path="/sales"
+                element={<Sales />}
+              />
+            </Routes>
+          </div>
+        </div>
+      </Router>
+    </ApolloProvider >
   );
 }
 
