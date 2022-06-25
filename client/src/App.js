@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
-  // ApolloProvider,
+  ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import Header from '../src/components/Header';
-// import Footer from '../src/components/Footer';
+import Footer from '../src/components/Footer';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
