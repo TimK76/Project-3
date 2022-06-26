@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup'
 import Sales from './pages/Sales';
+import Nav from './components/Nav'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -38,6 +39,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
+          {/* <Nav/> */}
           <Header />
           <div>
             <Routes>

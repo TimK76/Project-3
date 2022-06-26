@@ -1,6 +1,8 @@
 import React from 'react';
 import Auth from '../../utils/auth';
 import logo from '../../assets/images/logo.jpg';
+
+
 const Header = () => {
     const loggedIn = Auth.loggedIn();
     const logout = event => {
@@ -10,25 +12,23 @@ const Header = () => {
 
 return (
     <header>
-        <div>
-            <h1>
-                <a home="link" href="/">
-                    Sales Managers' Five Year Projections
-                </a>
+        <div className='header'>
+            <h1 className='header-h1'>
+                Is the Future for Cars GAS or ELECTRIC?
             </h1>
         </div>
-        <div>
-            <ul>
-                <li>
+        <div >
+            {/* <ul >
+                <li className='login'>
                     <a login="login" href="">Login</a>
                 </li>
-                <li>
+                <li className='signup'>
                     <a signup="signup" href="">Sign Up</a>
                 </li>
-            </ul>
+            </ul> */}
         </div>
-        <div>
-            <img src={logo} alt="BMW logo" />
+        <div className= 'logo-div'>
+        <img className='header-logo' src={logo} alt="BMW logo" />
         </div>
     </header>
 )

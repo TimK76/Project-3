@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <div>&copy;2022 by Group 5 </div>
+      <div className='footer'>&copy;2022 by Group 5 </div>
     </footer>
   );
 };
