@@ -1,14 +1,14 @@
 import React from 'react';
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
-import { XXXXXXXXXXXXXXXX }  from '../utils/queries';
+// import { XXXXXXXXXXXXXXXX }  from '../utils/queries';
 const Home = () => {
 
     const loggedIn = Auth.loggedIn();
 
     return(
         <main>
-        <div className="flex-row justify-space-between">
+        {/* <div className="flex-row justify-space-between">
           {loggedIn && (
             <div className="col-12 mb-3">
               <ThoughtForm />
@@ -33,7 +33,7 @@ const Home = () => {
               />
             </div>
           ) : null}
-        </div>
+        </div> */}
       </main>
     );
   };
